@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+  </head>
+
+  <body>
+    <a-scene>
+      <a-assets>
+        <img id="boxTexture" src="assets/wallback.jpg">
+        <img id="groundTexture" src="assets/piso.jpg">
+        <img id="img1" src="assets/wall1.png">
+        <img id="img2" src="assets/wall2.png">
+    </a-assets>
+       
+      <a-box 
+       src="#boxTexture" 
+       position="0 2.5 -5" 
+       rotation="0 0 0" 
+       scale="20 5 0.5"
+       ></a-box>
+        <a-box 
+       src="#boxTexture" 
+       position="10.2 2.5 5" 
+       rotation="0 90 0" 
+       scale="20 5 0.5"
+       ></a-box>
+    <a-image 
+    src="#img1"
+    position="0 2.2 -4.5"
+    width="20"
+    height="4"
+    ></a-image>
+        <a-image 
+    src="#img2"
+    position="9.7 2.2 5"
+    width="18"
+    rotation="0 90 0" 
+    height="4"
+    ></a-image>
+    
+     <a-sky color="lightblue"></a-sky>
+     <a-plane src="#groundTexture" rotation="-90 0 0" width="30" height="30" repeat="10 10"></a-plane>
+    
+     <a-camera>
+      <a-entity cursor="fuse: false; rayOrigin:mouse;" raycaster="objects:a-box" position="0 0 -1" >
+      </a-entity>
+    </a-camera>
+
+    </a-scene>
+  </body>
+</html>
+
